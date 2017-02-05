@@ -9,7 +9,7 @@ ap.add_argument("-i","--image",required=True,help="path to an image for object d
 ap.add_argument("-a","--annotate",default=None,help="text to annotate...")
 args = vars(ap.parse_args())
 
-detector = ObjectDetector(loadPath="detector.svm")
+detector = ObjectDetector(loadPath=args["detector"])
 
 imagePath = args["image"]
 image = cv2.imread(imagePath)
